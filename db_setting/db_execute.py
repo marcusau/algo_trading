@@ -12,9 +12,11 @@ from config.Config import db_config,data_source_config
 from db_setting import db_func
 
 
-crypto_schema='binance'
-crypto_tablename='hour_data'
+schema='usstock'#'binance'
+tablename='daily_data'
 
 
 #db_func.create_schema(schemaName=crypto_schema)
-db_func.create_table(tablename=crypto_tablename,schema=crypto_schema)
+#db_func.create_table(tablename=tablename,schema='binance')
+#db_func.drop_table(tablename='dayily_data',schema='binance')
+db_func.show_db_table(schema=schema)

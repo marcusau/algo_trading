@@ -68,12 +68,12 @@ def show_db_table(schema:str):
         table_list = [tuple[0] for tuple in cursor.fetchall()]
         connect.close()
         if len(table_list)==0:
-            print(f'there is no table in the schema {db_config.schema.usstock}')
-            logging.info(f'there is no table in the schema {db_config.schema.usstock}')
+            print(f'there is no table in Schema : {schema}')
+            logging.info(f'there is no table  Schema :  {schema}')
             return []
         else:
-            print(f'tablenames: {table_list} in the schema {db_config.schema.usstock}')
-            logging.info(f'tablenames: {table_list} in the schema {db_config.schema.usstock}')
+            print(f'tablenames: {table_list}  Schema :  {schema}')
+            logging.info(f'tablenames: {table_list}  Schema :  {schema}')
             return table_list
 
 #show_db_table(db_config=db_config,market='usstock')
